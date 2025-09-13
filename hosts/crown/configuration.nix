@@ -405,6 +405,9 @@ in
           name = "tadalaboratory";
           email = "103712387+tadalaboratory@users.noreply.github.com";
         };
+        safe = {
+          directory = "/etc/nixos";
+        };
       };
     };
     fish = {
