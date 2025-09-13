@@ -78,7 +78,7 @@
             pkgs."${pythonPackageName}"
             pkgs."${pythonPackageName}Packages".venvShellHook
             pkgs."${pythonPackageName}Packages".pyqt5
-            pkgs."${pythonPackageName}Packages".pyliblo
+            pkgs."${pythonPackageName}Packages".pyliblo3
             pkgs."${pythonPackageName}Packages".pyxdg
             pkgs.ruff
           ];
@@ -137,11 +137,11 @@
     in
     {
       devShells."x86_64-linux" = {
-        "python38" = getPythonShells "python38";
-        "python39" = getPythonShells "python39";
         "python310" = getPythonShells "python310";
         "python311" = getPythonShells "python311";
         "python312" = getPythonShells "python312";
+        "python313" = getPythonShells "python313";
+        "python314" = getPythonShells "python314";
       };
     };
 }
