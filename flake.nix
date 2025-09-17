@@ -70,7 +70,9 @@
           ]
           ++ map (user: ./hosts/${host}/users/${user}) (
             builtins.attrNames (
-              nixpkgs.lib.filterAttrs (_: type: type == "directory") (builtins.readDir ./hosts/${host}/users)
+              nixpkgs.lib.filterAttrs (name: type: type == "directory" && builtins.substring 0 1 name != ".") (
+                builtins.readDir ./hosts/${host}/users
+              )
             )
           );
         }
